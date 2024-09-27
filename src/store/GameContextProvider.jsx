@@ -18,7 +18,7 @@ const INITIAL_GAMESETTINGS = {
 };
 const INITIAL_CURRENTROUND = {
   wordObj: WORDS_LIST[0],
-  round: 0, //! here ms izzah
+  round: 0,
 };
 
 export default function GameContextProvider({ children }) {
@@ -98,7 +98,6 @@ export default function GameContextProvider({ children }) {
     resetEntireGame,
     resetWordsList,
   };
-  console.log("VALUE >>>", value);
 
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 }

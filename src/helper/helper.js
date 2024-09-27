@@ -39,5 +39,3 @@ function generateColorRange(color1, color2, steps) {
 
 // Generate 10 colors between "#eaef85" and "#372cbf"
 const colors = generateColorRange("#eaef85", "#37c2bf", 9);
-
-console.log(colors);

@@ -335,10 +335,10 @@ function Step2StartGame() {
   );
 
   return (
-    <Container sx={{ padding: { xs: "8px", md: "80px" } }}>
+    <Box id="whatsThis" sx={{ padding: { xs: "8px", md: "80px" } }}>
       {header}
       {content}
-    </Container>
+    </Box>
   );
 }
 
@@ -568,7 +568,6 @@ function GuessTheWord({ personNum, setPersonNum }) {
     !currentRound?.wordObj ||
     !currentRound?.wordObj.phrase
   ) {
-    console.log("ERROR HERE", currentRound);
     return <></>;
   }
   const { wordObj: { phrase = "", img = "", meaning = "" } = {} } =

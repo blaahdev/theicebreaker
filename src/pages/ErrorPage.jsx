@@ -15,8 +15,12 @@ export default function ErrorPage() {
       }}
     >
       <img src={notfoundpenguin} style={{ height: "400px" }} />
-      <Typography variant="h2">Page Not Found</Typography>
-      <Button onClick={() => navigate("/")}>Go back Home</Button>
+      <Typography variant="h2">Lost in the Snow!</Typography>
+      <Typography variant="body1">
+        Oops! It looks like our little penguin friend got lost in the snow.
+        Don’t worry, you can help them find their way back home! ⛄️
+      </Typography>
+      <Button onClick={() => navigate("/")}>Navigate back Home</Button>
     </Container>
   );
 }

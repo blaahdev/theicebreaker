@@ -69,7 +69,16 @@ export default function HorizontalNonLinearStepper({ stepList = [] }) {
       <Stepper nonLinear activeStep={activeStep}>
         {steps.map((label, index) => (
           <Step key={label} completed={completed[index]}>
-            <StepButton color="inherit" onClick={handleStep(index)}>
+            <StepButton
+              color="inherit"
+              onClick={handleStep(index)}
+              sx={{
+                // fontSize: { md: "1rem", xs: "0.8rem" },
+                ".MuiStepLabel-labelContainer": {
+                  display: { md: "block", xs: "none" },
+                },
+              }}
+            >
               {label}
             </StepButton>
           </Step>
@@ -78,7 +87,9 @@ export default function HorizontalNonLinearStepper({ stepList = [] }) {
       <>
         {allStepsCompleted() ? (
           <>
-            <Typography sx={{ mt: 2, mb: 1 }}>
+            <Typography
+              sx={{ mt: 2, mb: 1, fontSize: { xs: "0.7rem", md: "1.5em" } }}
+            >
               All steps completed - you&apos;re finished
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
@@ -103,13 +114,25 @@ export default function HorizontalNonLinearStepper({ stepList = [] }) {
               </Button>
               <Typography
                 variant="h1"
-                sx={{ textAlign: "center", mt: 2, mb: 1, py: 1 }}
+                sx={{
+                  fontSize: { xs: "2rem", md: "6rem" },
+                  textAlign: "center",
+                  mt: 2,
+                  mb: 1,
+                  py: 1,
+                }}
                 color="black"
               >
                 {stepList[activeStep].title}
               </Typography>
               {activeStep === steps.length - 1 ? (
-                <Typography variant="caption" sx={{ display: "inline-block" }}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    fontSize: { xs: "0.7rem", md: "1.5em" },
+                    display: "inline-block",
+                  }}
+                >
                   Step {activeStep + 1} already completed
                 </Typography>
               ) : (
@@ -166,12 +189,27 @@ export default function HorizontalNonLinearStepper({ stepList = [] }) {
 const Styled = styled.div`
   width: 100vw;
   padding: 20px 80px;
+
+  @media (max-width: 1000px) {
+    padding: 8px;
+  }
+
+  @media (min-width: 1450px) {
+    width: 1000px;
+    margin: auto;
+  }
+
   .MuiSvgIcon-root.MuiStepIcon-root {
     font-size: 4rem;
   }
 
+  overflow-x: auto;
+
   .content {
+    height: fit-content;
     width: 100%;
+    min-width: 613px;
+    overflow-x: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

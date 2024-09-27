@@ -4,10 +4,17 @@ import BobbyJonesSoftRegular from "./assets/font/Bobby-Jones-Soft-Regular.woff";
 const theme = createTheme({
   typography: {
     fontFamily: "BobbyJonesSoftRegular, Arial",
-    fontSize: 12,
-    body1: {
-      fontSize: "1.5rem",
-    },
+    // fontSize: 5, //12,
+    // h1: {
+    //   fontSize: "1.5rem", // Default font size
+    //   // Use breakpoints for responsive font size
+    //   [theme.breakpoints.down("sm")]: {
+    //     fontSize: "1rem", // Smaller font size on mobile (screen width < 600px)
+    //   },
+    // },
+    // body1: {
+    //   fontSize: "1.5rem",
+    // },
   },
   palette: {
     background: {

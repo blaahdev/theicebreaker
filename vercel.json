@@ -1,3 +1,9 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://theicebreaker.blaahco.com/$1",
+      "permanent": true
+    }
+  ]
 }

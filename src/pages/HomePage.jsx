@@ -66,5 +66,6 @@ const StyledHomePage = styled.div`
   background-image: url(${bg2});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 50px;
 `;
